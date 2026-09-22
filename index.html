@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio profissional de Aline Stephanie Fernandes da Silva — Agronomia, agronegócio, agricultura digital, pesquisa e inovação.">
+<title>Aline Fernandes | Portfólio Profissional</title>
+<style>
+:root{
+  --navy:#142b3d;
+  --blue:#245b7a;
+  --blue2:#3e7897;
+  --gold:#c8a45d;
+  --ink:#1c2933;
+  --muted:#687782;
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --line:#dce3e8;
+  --soft:#eaf0f4;
+  --font-family:Inter,Segoe UI,Arial,sans-serif;
+  --heading-font:Inter,Segoe UI,Arial,sans-serif;
+  --section-bg:#ffffff;
+  --hero-bg:#e9f0f4;
+  --heading-color:#142b3d;
+  --body-color:#1c2933;
+  --muted-color:#687782;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--font-family);color:var(--body-color);background:var(--bg);line-height:1.65}
+h1,h2,h3,.brand strong{font-family:var(--heading-font)}
+h1,h2.section-title,.profile-panel h2,.job-card h3,.edu-card h3,.skill-card h3,.course h3{color:var(--heading-color)}
+.hero{background:linear-gradient(115deg,var(--bg) 0%,var(--hero-bg) 100%)}
+.about,.skills{background:var(--section-bg)}
+.lead,.section-desc,.about p,.profile-panel p,.job-card p,.course p,.contact p,.skill-card ul,.fact span{color:var(--muted-color)}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:8px 0}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:43px;height:43px;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-weight:800;font-size:19px}
+.brand strong{display:block;color:var(--navy);font-size:18px;letter-spacing:.3px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.7px;text-transform:uppercase}
+nav{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;font-weight:700;color:#52636e}
+nav a:hover{color:var(--blue)}
+.hero{background:linear-gradient(115deg,#f9fbfc 0%,#e9f0f4 100%);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center;padding:88px 0}
+.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.08;letter-spacing:-1.7px;color:var(--navy);margin-bottom:22px}
+.hero h1 span{color:var(--blue)}
+.lead{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:5px;font-size:13px;font-weight:800;border:1px solid var(--blue);transition:.2s}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--navy)}
+.btn-secondary{background:#fff;color:var(--blue)}
+.btn-secondary:hover{background:var(--soft)}
+.profile-panel{background:#fff;border:1px solid var(--line);padding:30px;box-shadow:0 16px 40px rgba(20,43,61,.08);position:relative}
+.profile-panel:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--gold)}
+.initials{width:90px;height:90px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:30px;font-weight:800;margin-bottom:22px}
+.profile-panel h2{font-size:24px;line-height:1.2;color:var(--navy);margin-bottom:8px}
+.profile-panel p{font-size:14px;color:var(--muted)}
+.profile-meta{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:12px;font-size:13px}
+.profile-meta strong{color:var(--navy)}
+section{padding:78px 0}
+.section-head{margin-bottom:36px;max-width:760px}
+.section-head .kicker{margin-bottom:10px}
+h2.section-title{font-size:clamp(28px,4vw,40px);line-height:1.2;color:var(--navy);letter-spacing:-.8px}
+.section-desc{color:var(--muted);margin-top:12px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}
+.about p{color:var(--muted);margin-bottom:15px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{border:1px solid var(--line);background:var(--bg);padding:22px}
+.fact strong{display:block;font-size:25px;color:var(--blue);margin-bottom:3px}
+.fact span{font-size:13px;color:var(--muted)}
+.timeline{position:relative;display:grid;gap:18px}
+.timeline:before{content:"";position:absolute;left:116px;top:0;bottom:0;width:1px;background:var(--line)}
+.job{display:grid;grid-template-columns:150px 1fr;gap:32px;position:relative}
+.job-date{font-size:13px;font-weight:800;color:var(--blue);padding-top:22px}
+.job-card{background:#fff;border:1px solid var(--line);padding:25px 28px;position:relative}
+.job-card:before{content:"";position:absolute;left:-39px;top:27px;width:11px;height:11px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}
+.job-card h3{font-size:19px;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.job-card .company{font-size:13px;color:var(--blue);font-weight:700;margin-bottom:12px}
+.job-card p{font-size:14px;color:var(--muted)}
+.education{background:var(--navy);color:#fff}
+.education .kicker,.education h2{color:#fff}
+.education .section-desc{color:#c5d2db}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.edu-card{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);padding:28px}
+.edu-card .tag{display:inline-block;color:var(--navy);background:var(--gold);font-size:11px;font-weight:800;padding:4px 10px;border-radius:3px;margin-bottom:16px}
+.edu-card h3{font-size:21px;line-height:1.3;margin-bottom:8px}
+.edu-card p{font-size:14px;color:#c5d2db}
+.skills{background:#fff}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card{border:1px solid var(--line);padding:25px;background:var(--bg)}
+.skill-card h3{font-size:17px;color:var(--navy);margin-bottom:14px}
+.skill-card ul{list-style:none;color:var(--muted);font-size:14px}
+.skill-card li{padding:5px 0;border-bottom:1px solid #e2e8ec}
+.skill-card li:last-child{border-bottom:0}
+.skill-card li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:9px}
+.courses{background:var(--bg)}
+.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.course{background:#fff;border:1px solid var(--line);padding:19px 22px}
+.course h3{font-size:15px;color:var(--navy);line-height:1.4;margin-bottom:5px}
+.course p{font-size:13px;color:var(--muted)}
+.contact{background:#e9eff3}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}
+.contact p{color:var(--muted);margin:15px 0 25px}
+.contact-list{display:grid;gap:12px}
+.contact-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);padding:16px 18px;font-size:14px;color:var(--navy);font-weight:700}
+.contact-item span{font-weight:400;color:var(--muted);display:block;font-size:12px}
+footer{background:#0d202e;color:#c5d2db;text-align:center;padding:26px;font-size:12px}
+.palette-box{margin:18px 0 8px;padding:16px;border:1px solid var(--line);background:var(--bg);border-radius:8px}
+.palette-box strong{display:block;color:var(--navy);margin-bottom:10px}
+.palette-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.palette-btn{display:flex;align-items:center;gap:10px;width:100%;padding:10px;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:6px;cursor:pointer;text-align:left;font:inherit;font-size:12px;font-weight:800}
+.palette-btn:hover{border-color:var(--blue);background:var(--soft)}
+.swatches{display:flex;gap:4px;flex-shrink:0}
+.swatches i{display:block;width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+@media(max-width:520px){.palette-grid{grid-template-columns:1fr}}
+@media(max-width:850px){
+  .nav{flex-direction:column;justify-content:center;padding:16px 0;gap:12px}
+  nav{justify-content:center;gap:12px 18px}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+  .hero-grid{padding:58px 0}
+  .timeline:before{display:none}
+  .job{grid-template-columns:1fr;gap:8px}
+  .job-date{padding-top:0}
+  .job-card:before{display:none}
+  .edu-grid,.course-grid{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:1fr}
+  section{padding:56px 0}
+}
+@media(max-width:480px){
+  .facts{grid-template-columns:1fr}
+  .profile-panel{padding:24px}
+  .job-card{padding:22px}
+  .btn{width:100%}
+}
+
+.profile-photo{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:50% 50%;display:none;margin-bottom:22px;border:4px solid var(--gold);background:var(--navy)}
+.photo-controls{border:1px solid var(--line);padding:16px;background:var(--bg);margin:16px 0;display:grid;gap:10px}
+.photo-controls input[type=file]{width:100%}
+.photo-controls input[type=range]{width:100%}
+.photo-preview{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 50%;display:none;border:4px solid var(--gold);background:var(--navy);margin:8px 0}
+.admin-box{max-height:85vh;overflow-y:auto}
+</style>
+
+<style>
+.admin-btn{border:1px solid var(--gold);background:#fff;color:var(--navy);border-radius:5px;padding:9px 14px;font:inherit;font-weight:800;cursor:pointer}
+.admin-modal{position:fixed;inset:0;background:rgba(13,32,46,.65);display:grid;place-items:center;padding:20px;z-index:100;opacity:1}
+.admin-modal[aria-hidden="true"]{display:none}
+.admin-box{position:relative;width:min(520px,100%);max-height:calc(100vh - 40px);overflow-y:auto;background:#fff;border:1px solid var(--line);padding:32px;box-shadow:0 20px 60px rgba(20,43,61,.25)}
+.admin-close{position:absolute;right:14px;top:8px;border:0;background:none;font-size:30px;color:var(--muted);cursor:pointer}
+.admin-box h2{color:var(--navy);margin:0 0 20px;font-size:28px}
+.admin-box label{display:block;font-weight:800;color:var(--navy);margin:15px 0}
+.admin-box input,.admin-box textarea{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid var(--line);font:inherit;border-radius:5px}
+.admin-box textarea{min-height:110px;resize:vertical}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.admin-hint{font-size:12px;color:var(--muted);margin-top:14px}
+.editor-section{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.editor-section h3{font-size:16px;color:var(--navy);margin-bottom:8px}
+.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.editor-grid label{margin:8px 0}
+.editor-grid input[type=color]{height:42px;padding:4px}
+.editor-grid select{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid var(--line);font:inherit;border-radius:5px;background:#fff}
+.editor-note{font-size:12px;color:var(--muted);margin-top:8px}
+@media(max-width:600px){.editor-grid{grid-template-columns:1fr}}
+
+.pdf-box{border:1px solid var(--line);padding:16px;background:var(--bg);margin:16px 0;display:grid;gap:10px}.pdf-link{display:none}.pdf-link.visible{display:inline-flex}
+@media(max-width:850px){nav{align-items:center}}
+
+.profile-photo{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:50% 50%;display:none;margin-bottom:22px;border:4px solid var(--gold);background:var(--navy)}
+.photo-controls{border:1px solid var(--line);padding:16px;background:var(--bg);margin:16px 0;display:grid;gap:10px}
+.photo-controls input[type=file]{width:100%}
+.photo-controls input[type=range]{width:100%}
+.photo-preview{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 50%;display:none;border:4px solid var(--gold);background:var(--navy);margin:8px 0}
+.admin-box{max-height:85vh;overflow-y:auto}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>Portfólio profissional</span>
+    <span>Agronomia • Agronegócio • Tecnologia e inovação</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio">
+      <div class="brand-mark">AF</div>
+      <div><strong id="brandName">Aline Fernandes</strong><small>Portfólio profissional</small></div>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencias">Experiências</a>
+      <a href="#formacao">Formação</a>
+      <a href="#competencias">Competências</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contato">Contato</a>
+      <button class="admin-btn" id="adminOpen">Login</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Perfil profissional</div>
+      <h1 id="heroTitle">Conhecimento técnico para um <span>agronegócio mais eficiente.</span></h1>
+      <p class="lead" id="heroLead">Estudante de Agronomia com experiência em pesquisa científica, agricultura digital, agricultura de precisão, geoprocessamento, operação de drones e tecnologia de aplicação de defensivos agrícolas.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#experiencias">Conheça minha trajetória →</a>
+        <a class="btn btn-secondary" href="#contato">Entrar em contato</a>
+        <a class="btn btn-secondary pdf-link" id="publicPdfLinkHero" href="#" download="curriculo-aline-fernandes.pdf">Baixar currículo em PDF ↓</a>
+      </div>
+    </div>
+    <aside class="profile-panel">
+      <div class="initials" id="initials">AF</div><img class="profile-photo" id="profilePhoto" alt="Foto de perfil">
+      <h2>Aline Stephanie<br>Fernandes da Silva</h2>
+      <p>Agronomia, tecnologia e inovação no campo.</p>
+      <div class="profile-meta">
+        <div><strong>Formação atual</strong><br>8º semestre de Agronomia</div>
+        <div><strong>Áreas de atuação</strong><br>Agricultura digital, pesquisa, sustentabilidade e agronegócio</div>
+        <div><strong>Localização</strong><br>Bandeirantes — Paraná, Brasil</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">01 — Sobre mim</div>
+      <h2 class="section-title">Uma trajetória multidisciplinar</h2>
+      <p class="section-desc">Formação em Agronomia conectada à tecnologia, à pesquisa e ao desenvolvimento sustentável.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>Sou estudante do 8º semestre de Agronomia pela Universidade Pitágoras Unopar, com experiência em pesquisa científica, agricultura digital, agricultura de precisão, geoprocessamento e tecnologia de aplicação de defensivos agrícolas.</p>
+        <p>Minha trajetória acadêmica inclui participação em projetos de iniciação científica, desenvolvimento tecnológico, empreendedorismo e extensão rural, com atuação em soluções voltadas à agricultura sustentável e à inovação no campo.</p>
+        <p>Busco oportunidades em empresas e organizações do agronegócio nas quais possa aplicar conhecimentos técnicos, contribuir para a eficiência operacional e participar do desenvolvimento de soluções para o setor.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>4</strong><span>Experiências e projetos registrados</span></div>
+        <div class="fact"><strong>8º</strong><span>Semestre de Agronomia</span></div>
+        <div class="fact"><strong>3</strong><span>Campos universitários remapeados</span></div>
+        <div class="fact"><strong>10+</strong><span>Competências e cursos técnicos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencias">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">02 — Experiências</div>
+      <h2 class="section-title">Projetos e experiências profissionais</h2>
+      <p class="section-desc">Experiências desenvolvidas em ambientes acadêmicos, tecnológicos, sociais e agroecológicos.</p>
+    </div>
+    <div class="timeline">
+      <article class="job">
+        <div class="job-date">2020 — 2021</div>
+        <div class="job-card">
+          <h3>Desenvolvimento em Agricultura Digital</h3>
+          <div class="company">UENP / NITEC • Fundação Araucária</div>
+          <p>Participação em projeto de iniciação científica e desenvolvimento tecnológico, com criação de protótipo inovador para meteorologia agrícola e aplicação em túnel de vento, integrando tecnologia e agricultura sustentável.</p>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job-date">2021 — 2022</div>
+        <div class="job-card">
+          <h3>Iniciação ao Empreendedorismo</h3>
+          <div class="company">UENP • Iniciação Tecnológica Industrial</div>
+          <p>Remapeamento de três campos universitários — Bandeirantes, Cornélio Procópio e Jacarezinho — por meio do programa HandsOn. Desenvolvimento de MVP funcional para campus universitário, aplicando programação web e banco de dados.</p>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job-date">2022 — 2023</div>
+        <div class="job-card">
+          <h3>Tecnologia e Produção</h3>
+          <div class="company">UENP • Programa Aconchego</div>
+          <p>Implementação de programa institucional em parceria com ONG, com desenvolvimento de estratégias para fomentar o empreendedorismo feminino e a inclusão social. Capacitação de mulheres em empreendedorismo e criação de oportunidades profissionais e pessoais.</p>
+        </div>
+      </article>
+      <article class="job">
+        <div class="job-date">2024 — 2025</div>
+        <div class="job-card">
+          <h3>Manejo em Agricultura Sustentável</h3>
+          <div class="company">UENP / NEAT • Universidade Sem Fronteiras</div>
+          <p>Atuação em projeto de pesquisa em agroecologia, contribuindo para a ampliação do fornecimento de alimentos orgânicos na merenda escolar por meio do PNAE. Apoio a cooperativas da agricultura familiar e ao desenvolvimento territorial sustentável no Norte Pioneiro do Paraná.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="education" id="formacao">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">03 — Formação acadêmica</div>
+      <h2 class="section-title">Formação e desenvolvimento</h2>
+      <p class="section-desc">Conhecimentos construídos na área agrícola e complementados por tecnologia e computação.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card"><span class="tag">Em andamento</span><h3>Bacharelado em Agronomia</h3><p>Universidade Pitágoras Unopar</p><p><strong>8º semestre — 4º ano</strong></p></div>
+      <div class="edu-card"><span class="tag">Formação complementar</span><h3>Bacharelado em Ciência da Computação</h3><p>Universidade Estadual do Norte do Paraná — UENP</p><p><strong>Até o 6º semestre concluído</strong></p></div>
+      <div class="edu-card"><span class="tag">Concluído</span><h3>Ensino Médio</h3><p>Colégio SESI-PR</p></div>
+      <div class="edu-card"><span class="tag">Idiomas</span><h3>Conhecimentos linguísticos</h3><p>Português — Nativo</p><p>Espanhol e Inglês — Intermediário / Cursando</p><p>Italiano, Francês e Alemão — Iniciante / Cursando</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="competencias">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">04 — Competências</div>
+      <h2 class="section-title">Conhecimentos técnicos</h2>
+      <p class="section-desc">Competências desenvolvidas na formação acadêmica, em projetos e em cursos de aperfeiçoamento.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card"><h3>Agricultura e sustentabilidade</h3><ul><li>Agricultura sustentável</li><li>Manejo agrícola</li><li>Agroecologia</li><li>Gestão ambiental</li><li>Meteorologia agrícola</li></ul></div>
+      <div class="skill-card"><h3>Agricultura digital</h3><ul><li>Agricultura de precisão</li><li>QGIS e geoprocessamento</li><li>Sistemas de Informação Geográfica</li><li>Operação de drones agrícolas</li><li>Tecnologia de aplicação de defensivos</li></ul></div>
+      <div class="skill-card"><h3>Tecnologia e informática</h3><ul><li>Python, Java e C/C++</li><li>PHP, HTML, CSS e SQL</li><li>Microsoft Office avançado</li><li>Photoshop</li><li>Arduino e Robótica</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="courses" id="cursos">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">05 — Cursos e certificações</div>
+      <h2 class="section-title">Aperfeiçoamento profissional</h2>
+      <p class="section-desc">Cursos registrados no currículo profissional.</p>
+    </div>
+    <div class="course-grid">
+      <div class="course"><h3>Agricultura de Precisão: Introdução ao QGIS</h3><p>SENAR-PR / Sindicato Rural de Bandeirantes — 2026</p></div>
+      <div class="course"><h3>Agricultura de Precisão: Operação de Drones</h3><p>SENAR-PR / Sindicato Rural de Andirá — 2026</p></div>
+      <div class="course"><h3>Tecnologia de Aplicação de Defensivos Agrícolas — Básico</h3><p>SENAR-PR / Sindicato Rural de Bandeirantes — 2026</p></div>
+      <div class="course"><h3>MIP: Manejo Integrado da Soja</h3><p>SENAR-PR / Sindicato Rural de Andirá — 2026</p></div>
+      <div class="course"><h3>Classificador de Grãos: Trigo</h3><p>SENAR-PR / Sindicato Rural de Bandeirantes — 2026</p></div>
+      <div class="course"><h3>Classificador de Grãos: Milho e Soja</h3><p>SENAR-PR / Sindicato Rural de Bandeirantes — 2026</p></div>
+      <div class="course"><h3>Nutrição Animal</h3><p>SENAR — A distância — 2026</p></div>
+      <div class="course"><h3>Armazenamento de Grãos em Sacarias</h3><p>SENAR — A distância — 2026</p></div>
+      <div class="course"><h3>Gestão Ambiental e Sustentabilidade</h3><p>UNOPAR</p></div>
+      <div class="course"><h3>Agroecologia: Bases Conceituais e Metodológicas para Extensão Rural</h3><p>Universidade de Brasília — UnB</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container contact-grid">
+    <div>
+      <div class="kicker">06 — Contato</div>
+      <h2 class="section-title">Vamos conversar?</h2>
+      <p>Estou aberta a oportunidades, projetos e conexões profissionais nas áreas de Agronomia, agronegócio, tecnologia e inovação.</p>
+      <a class="btn btn-primary" href="mailto:aalinestephaniefernandes@gmail.com">Enviar e-mail →</a>
+    </div>
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:aalinestephaniefernandes@gmail.com">✉️ <div>E-mail<span>aalinestephaniefernandes@gmail.com</span></div></a>
+      <a class="contact-item" href="https://www.linkedin.com/in/alinefernandes99/" target="_blank" rel="noopener">in <div>LinkedIn<span>linkedin.com/in/alinefernandes99</span></div></a>
+      <a class="contact-item" href="https://lattes.cnpq.br/7230852444252884" target="_blank" rel="noopener">🎓 <div>Currículo Lattes<span>Consultar perfil acadêmico</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="admin-modal" id="adminModal" aria-hidden="true">
+  <div class="admin-box">
+    <button class="admin-close" id="adminClose" aria-label="Fechar">×</button>
+    <div id="loginView">
+      <div class="kicker">Acesso restrito</div>
+      <h2>Área do administrador</h2>
+      <label>E-mail<input id="loginEmail" type="email" placeholder="Seu e-mail"></label>
+      <label>Senha<input id="loginPassword" type="password" placeholder="Sua senha"></label>
+      <button class="btn btn-primary" id="loginBtn">Entrar</button>
+      <p class="admin-hint">Use o e-mail cadastrado e a senha configurada no arquivo.</p>
+    </div>
+    <div id="adminView" hidden>
+      <div class="kicker">Painel</div>
+      <h2>Editar portfólio</h2>
+      <label>Nome exibido<input id="editName" type="text"></label>
+      <label>Frase principal<textarea id="editLead"></textarea></label>
+      <label>Cor principal<input id="editColor" type="color" value="#245b7a"></label>
+      <div class="editor-section">
+        <h3>Textos da página</h3>
+        <div class="editor-grid">
+          <label>Texto da barra superior<input id="editTopLeft" type="text"></label>
+          <label>Texto direito da barra<input id="editTopRight" type="text"></label>
+          <label>Texto do menu/identificação<input id="editBrandSubtitle" type="text"></label>
+          <label>Título pequeno do início<input id="editHeroKicker" type="text"></label>
+          <label>Título principal<input id="editHeroTitle" type="text"></label>
+          <label>Botão de trajetória<input id="editTrajectoryBtn" type="text"></label>
+          <label>Botão de contato<input id="editContactBtn" type="text"></label>
+          <label>Título do cartão de perfil<input id="editProfileTitle" type="text"></label>
+          <label>Descrição do perfil<textarea id="editProfileDesc"></textarea></label>
+          <label>Formação atual<textarea id="editFormationText"></textarea></label>
+          <label>Áreas de atuação<textarea id="editAreasText"></textarea></label>
+          <label>Localização<input id="editLocationText" type="text"></label>
+        </div>
+      </div>
+      <div class="editor-section">
+        <h3>Fontes e cores</h3>
+        <div class="palette-box">
+          <strong>Paletas prontas — escolha uma combinação</strong>
+          <div class="palette-grid">
+            <button type="button" class="palette-btn" data-palette="campo"><span class="swatches"><i style="background:#244b36"></i><i style="background:#6f9f58"></i><i style="background:#d8b45a"></i><i style="background:#f3f1e8"></i></span>Verde campo</button>
+            <button type="button" class="palette-btn" data-palette="azul"><span class="swatches"><i style="background:#12304a"></i><i style="background:#2c6e91"></i><i style="background:#d7a84b"></i><i style="background:#edf3f6"></i></span>Azul profissional</button>
+            <button type="button" class="palette-btn" data-palette="terra"><span class="swatches"><i style="background:#6b3f32"></i><i style="background:#b86f52"></i><i style="background:#d9b77b"></i><i style="background:#f7efe7"></i></span>Terra e natureza</button>
+            <button type="button" class="palette-btn" data-palette="moderna"><span class="swatches"><i style="background:#3b1f5f"></i><i style="background:#7652a8"></i><i style="background:#d8b46a"></i><i style="background:#f1edf7"></i></span>Moderna elegante</button>
+          </div>
+          <p class="editor-note">A paleta altera as cores gerais. Depois, clique em “Salvar edição” para manter a escolha online.</p>
+        </div>
+        <div class="editor-grid">
+          <label>Fonte geral<select id="editFont"><option value="Inter,Segoe UI,Arial,sans-serif">Inter / Segoe UI</option><option value="Arial,sans-serif">Arial</option><option value="Georgia,serif">Georgia</option><option value="Verdana,sans-serif">Verdana</option><option value="Trebuchet MS,sans-serif">Trebuchet MS</option></select></label>
+          <label>Fonte dos títulos<select id="editHeadingFont"><option value="Inter,Segoe UI,Arial,sans-serif">Inter / Segoe UI</option><option value="Arial,sans-serif">Arial</option><option value="Georgia,serif">Georgia</option><option value="Verdana,sans-serif">Verdana</option><option value="Trebuchet MS,sans-serif">Trebuchet MS</option></select></label>
+          <label>Cor do texto<input id="editTextColor" type="color" value="#1c2933"></label>
+          <label>Cor dos títulos<input id="editHeadingColor" type="color" value="#142b3d"></label>
+          <label>Cor dos textos secundários<input id="editMutedColor" type="color" value="#687782"></label>
+          <label>Cor do fundo da página<input id="editBgColor" type="color" value="#f4f6f8"></label>
+          <label>Cor do fundo inicial<input id="editHeroBg" type="color" value="#e9f0f4"></label>
+          <label>Cor das seções brancas<input id="editSectionBg" type="color" value="#ffffff"></label>
+          <label>Cor azul/navy<input id="editNavy" type="color" value="#142b3d"></label>
+          <label>Cor dourada<input id="editGold" type="color" value="#c8a45d"></label>
+          <label>Cor das bordas<input id="editLine" type="color" value="#dce3e8"></label>
+        </div>
+        <p class="editor-note">As alterações de texto e aparência ficam salvas no Supabase quando você clicar em Salvar edição.</p>
+      </div>
+      <div class="pdf-box">
+        <strong>Currículo em PDF</strong>
+        <input id="pdfFile" type="file" accept="application/pdf">
+        <button type="button" class="btn btn-secondary" id="removePdfBtn">Remover currículo PDF</button>
+        <p class="admin-hint">O currículo ficará disponível para download no botão público quando salvo neste navegador.</p>
+      </div>
+      <div class="photo-controls">
+        <strong>Foto de perfil</strong>
+        <input id="photoFile" type="file" accept="image/*">
+        <img id="photoPreview" class="photo-preview" alt="Pré-visualização da foto">
+        <label>Zoom <input id="photoZoom" type="range" min="100" max="250" value="100"></label>
+        <label>Posição horizontal <input id="photoX" type="range" min="0" max="100" value="50"></label>
+        <label>Posição vertical <input id="photoY" type="range" min="0" max="100" value="50"></label>
+        <button type="button" class="btn btn-secondary" id="removePhotoBtn">Remover foto</button>
+      </div>
+      <div class="admin-actions">
+        <button class="btn btn-primary" id="saveBtn">Salvar edição</button>
+        <button class="btn btn-secondary" id="resetBtn">Restaurar padrão</button>
+        <button class="btn btn-secondary" id="logoutBtn">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Aline Stephanie Fernandes da Silva</p>
+  <p>Portfólio profissional • Agronomia, tecnologia e inovação</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+ const $=id=>document.getElementById(id);
+ const SUPABASE_URL='https://udujctfdxcbnffomwect.supabase.co';
+ const SUPABASE_KEY='sb_publishable_6e4GhpgDIniclQ_0pZVOIQ_XvsdSVpR';
+ const ADMIN_EMAIL='aalinestephaniefernandes@gmail.com';
+ const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+ const defaults={name:'Aline Stephanie Fernandes da Silva',lead:'Estudante de Agronomia com experiência em pesquisa científica, agricultura digital, agricultura de precisão, geoprocessamento, operação de drones e tecnologia de aplicação de defensivos agrícolas.',color:'#245b7a',photo:'',zoom:100,x:50,y:50,pdf:'',settings:{topLeft:'Portfólio profissional',topRight:'Agronomia • Agronegócio • Tecnologia e inovação',brandSubtitle:'Portfólio profissional',heroKicker:'Perfil profissional',heroTitle:'Conhecimento técnico para um agronegócio mais eficiente.',trajectoryBtn:'Conheça minha trajetória →',contactBtn:'Entrar em contato',profileTitle:'Aline Stephanie Fernandes da Silva',profileDesc:'Agronomia, tecnologia e inovação no campo.',formationText:'8º semestre de Agronomia',areasText:'Agricultura digital, pesquisa, sustentabilidade e agronegócio',locationText:'Bandeirantes — Paraná, Brasil',font:'Inter,Segoe UI,Arial,sans-serif',headingFont:'Inter,Segoe UI,Arial,sans-serif',textColor:'#1c2933',headingColor:'#142b3d',mutedColor:'#687782',bgColor:'#f4f6f8',heroBg:'#e9f0f4',sectionBg:'#ffffff',navy:'#142b3d',gold:'#c8a45d',line:'#dce3e8'}};
+ const palettes={
+   campo:{color:'#6f9f58',textColor:'#24352b',headingColor:'#244b36',mutedColor:'#617467',bgColor:'#f3f1e8',heroBg:'#e3eee0',sectionBg:'#ffffff',navy:'#244b36',gold:'#d8b45a',line:'#d6dfd2'},
+   azul:{color:'#2c6e91',textColor:'#20313d',headingColor:'#12304a',mutedColor:'#607785',bgColor:'#f1f5f7',heroBg:'#edf3f6',sectionBg:'#ffffff',navy:'#12304a',gold:'#d7a84b',line:'#d4e0e7'},
+   terra:{color:'#b86f52',textColor:'#3b2a25',headingColor:'#6b3f32',mutedColor:'#806e66',bgColor:'#f7efe7',heroBg:'#f3e2d6',sectionBg:'#fffdf9',navy:'#6b3f32',gold:'#d9b77b',line:'#e5d4c8'},
+   moderna:{color:'#7652a8',textColor:'#30263a',headingColor:'#3b1f5f',mutedColor:'#756b82',bgColor:'#f1edf7',heroBg:'#e9e0f3',sectionBg:'#ffffff',navy:'#3b1f5f',gold:'#d8b46a',line:'#ddd3e8'}
+ };
+ let state={...defaults};
+ let pendingPhoto=null,pendingPdf=null;
+
+ function apply(s){
+   state={...defaults,...s,settings:{...defaults.settings,...(s.settings||{})}};
+   const t=state.settings;
+   $('brandName').textContent=state.name.replace(/\s+.*$/,'');
+   $('editName').value=state.name;
+   $('editLead').value=state.lead;
+   $('editColor').value=state.color||defaults.color;
+   const ids={editTopLeft:'topLeft',editTopRight:'topRight',editBrandSubtitle:'brandSubtitle',editHeroKicker:'heroKicker',editHeroTitle:'heroTitle',editTrajectoryBtn:'trajectoryBtn',editContactBtn:'contactBtn',editProfileTitle:'profileTitle',editProfileDesc:'profileDesc',editFormationText:'formationText',editAreasText:'areasText',editLocationText:'locationText',editFont:'font',editHeadingFont:'headingFont',editTextColor:'textColor',editHeadingColor:'headingColor',editMutedColor:'mutedColor',editBgColor:'bgColor',editHeroBg:'heroBg',editSectionBg:'sectionBg',editNavy:'navy',editGold:'gold',editLine:'line'};
+   Object.entries(ids).forEach(([id,key])=>{if($(id))$(id).value=t[key]||'';});
+   const root=document.documentElement;
+   [['--blue',state.color||defaults.color],['--font-family',t.font],['--heading-font',t.headingFont],['--body-color',t.textColor],['--heading-color',t.headingColor],['--muted-color',t.mutedColor],['--bg',t.bgColor],['--hero-bg',t.heroBg],['--section-bg',t.sectionBg],['--navy',t.navy],['--gold',t.gold],['--line',t.line]].forEach(([k,v])=>root.style.setProperty(k,v));
+   document.querySelector('.topbar .container span:first-child').textContent=t.topLeft;
+   document.querySelector('.topbar .container span:last-child').textContent=t.topRight;
+   document.querySelector('.brand small').textContent=t.brandSubtitle;
+   document.querySelector('.hero .kicker').textContent=t.heroKicker;
+   $('heroTitle').textContent=t.heroTitle;
+   document.querySelector('.actions a[href="#experiencias"]').textContent=t.trajectoryBtn;
+   document.querySelector('.actions a[href="#contato"]').textContent=t.contactBtn;
+   document.querySelector('.profile-panel h2').textContent=t.profileTitle;
+   document.querySelector('.profile-panel>p').textContent=t.profileDesc;
+   const meta=document.querySelectorAll('.profile-meta>div'); if(meta[0])meta[0].innerHTML='<strong>Formação atual</strong><br>'+t.formationText; if(meta[1])meta[1].innerHTML='<strong>Áreas de atuação</strong><br>'+t.areasText; if(meta[2])meta[2].innerHTML='<strong>Localização</strong><br>'+t.locationText;
+   $('photoZoom').value=state.zoom||100; $('photoX').value=state.x??50; $('photoY').value=state.y??50;
+   updatePhoto(state); updatePdf(state);
+ }
+ function open(){ $('adminModal').setAttribute('aria-hidden','false'); }
+ function close(){ $('adminModal').setAttribute('aria-hidden','true'); }
+ $('adminOpen').addEventListener('click',open);
+ $('adminClose').addEventListener('click',close);
+
+ async function loadRemote(){
+   const {data,error}=await supabaseClient.from('portfolio_config').select('*').order('id',{ascending:true}).limit(1).maybeSingle();
+   if(error){console.error(error);return;}
+   if(data){
+     // O banco usa os nomes profile_photo_path e resume_path;
+     // a interface usa photo e pdf. Fazemos a conversão ao carregar.
+     apply({
+       ...data,
+       photo: data.profile_photo_path || '',
+       zoom: (data.settings && data.settings.photoZoom) || 100,
+       x: (data.settings && data.settings.photoX) ?? 50,
+       y: (data.settings && data.settings.photoY) ?? 50,
+       pdf: data.resume_path || '',
+       color: data.primary_color || defaults.color,
+       settings: data.settings || defaults.settings
+     });
+   } else apply(defaults);
+ }
+ async function login(){
+   const email=$('loginEmail').value.trim().toLowerCase();
+   const password=$('loginPassword').value;
+   const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+   if(error || !data.user || data.user.email.toLowerCase()!==ADMIN_EMAIL){
+     await supabaseClient.auth.signOut();
+     alert('E-mail ou senha incorretos.');
+     return;
+   }
+   $('loginView').hidden=true;
+   $('adminView').hidden=false;
+   await loadRemote();
+ }
+ $('loginBtn').addEventListener('click',login);
+ $('loginPassword').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
+
+ function updatePhoto(s){
+   const img=$('profilePhoto'), initials=$('initials'), preview=$('photoPreview');
+   if(s.photo){
+     img.src=s.photo;img.style.display='block';initials.style.display='none';
+     img.style.objectPosition=(s.x??50)+'% '+(s.y??50)+'%';
+     img.style.transform='scale('+(s.zoom||100)/100+')';
+     if(preview){preview.src=s.photo;preview.style.display='block';preview.style.objectPosition=(s.x??50)+'% '+(s.y??50)+'%';preview.style.transform='scale('+(s.zoom||100)/100+' )';}
+   }else{
+     img.removeAttribute('src');img.style.display='none';initials.style.display='grid';
+     if(preview){preview.removeAttribute('src');preview.style.display='none';}
+   }
+ }
+function updatePdf(s){
+  const links=[$('publicPdfLink'),$('publicPdfLinkHero')].filter(Boolean);
+  if(!links.length)return;
+  links.forEach(link=>{
+    if(s.pdf){link.href=s.pdf;link.classList.add('visible');link.target='_blank';}
+    else{link.removeAttribute('href');link.classList.remove('visible');}
+  });
+}
+$('photoFile').addEventListener('change',e=>{
+   const file=e.target.files[0]; if(!file)return;
+   if(!file.type.startsWith('image/')){alert('Escolha uma imagem válida.');return;}
+   pendingPhoto=file;
+   const reader=new FileReader();
+   reader.onload=()=>{const s={...state,photo:reader.result};apply(s);};
+   reader.readAsDataURL(file);
+ });
+ ['photoZoom','photoX','photoY'].forEach(id=>$(id).addEventListener('input',()=>{
+   apply({...state,zoom:+$('photoZoom').value,x:+$('photoX').value,y:+$('photoY').value});
+ }));
+ $('removePhotoBtn').addEventListener('click',()=>{
+   pendingPhoto=null;
+   apply({...state,photo:''});
+ });
+ $('pdfFile').addEventListener('change',e=>{
+   const file=e.target.files[0]; if(!file)return;
+   if(file.type!=='application/pdf'){alert('Escolha um arquivo PDF.');return;}
+   pendingPdf=file;
+ });
+ $('removePdfBtn').addEventListener('click',()=>{
+   pendingPdf='REMOVE';
+   apply({...state,pdf:''});
+ });
+
+ async function uploadFile(file,path){
+   const {error}=await supabaseClient.storage.from('portfolio-files').upload(path,file,{upsert:true,contentType:file.type});
+   if(error)throw error;
+   const {data}=supabaseClient.storage.from('portfolio-files').getPublicUrl(path);
+   return data.publicUrl;
+ }
+ $('saveBtn').addEventListener('click',async()=>{
+   const btn=$('saveBtn');btn.disabled=true;btn.textContent='Salvando...';
+   try{
+     let photo=state.photo||'',pdf=state.pdf||'';
+     if(pendingPhoto){
+       photo=await uploadFile(pendingPhoto,'profile/photo');
+     }else if(!photo){photo='';}
+     if(pendingPdf && pendingPdf!=='REMOVE'){
+       pdf=await uploadFile(pendingPdf,'documents/curriculo.pdf');
+     }else if(pendingPdf==='REMOVE'){
+       await supabaseClient.storage.from('portfolio-files').remove(['documents/curriculo.pdf']);
+       pdf='';
+     }
+     const settings={...state.settings,photoZoom:+$('photoZoom').value,photoX:+$('photoX').value,photoY:+$('photoY').value,topLeft:$('editTopLeft').value,topRight:$('editTopRight').value,brandSubtitle:$('editBrandSubtitle').value,heroKicker:$('editHeroKicker').value,heroTitle:$('editHeroTitle').value,trajectoryBtn:$('editTrajectoryBtn').value,contactBtn:$('editContactBtn').value,profileTitle:$('editProfileTitle').value,profileDesc:$('editProfileDesc').value,formationText:$('editFormationText').value,areasText:$('editAreasText').value,locationText:$('editLocationText').value,font:$('editFont').value,headingFont:$('editHeadingFont').value,textColor:$('editTextColor').value,headingColor:$('editHeadingColor').value,mutedColor:$('editMutedColor').value,bgColor:$('editBgColor').value,heroBg:$('editHeroBg').value,sectionBg:$('editSectionBg').value,navy:$('editNavy').value,gold:$('editGold').value,line:$('editLine').value};
+     const payload={name:$('editName').value.trim()||defaults.name,headline:$('editLead').value.trim()||defaults.lead,primary_color:$('editColor').value,profile_photo_path:photo||null,resume_path:pdf||null,settings,updated_at:new Date().toISOString()};
+     const {error}=await supabaseClient.from('portfolio_config').update(payload).eq('id',1);
+     if(error)throw error;
+     pendingPhoto=null;pendingPdf=null;
+     apply({...state,...payload,photo:photo,pdf:pdf});
+     alert('Alterações salvas online com sucesso.');
+   }catch(err){
+     console.error(err);
+     alert('Não foi possível salvar. Verifique sua conexão e as permissões do Supabase.');
+   }finally{btn.disabled=false;btn.textContent='Salvar edição';}
+ });
+ $('resetBtn').addEventListener('click',()=>{
+   if(confirm('Restaurar os dados padrão?')){pendingPhoto=null;pendingPdf=null;apply(defaults);}
+ });
+ $('logoutBtn').addEventListener('click',async()=>{
+   await supabaseClient.auth.signOut();
+   $('adminView').hidden=true;$('loginView').hidden=false;$('loginPassword').value='';
+ });
+ document.querySelectorAll('[data-palette]').forEach(btn=>btn.addEventListener('click',()=>{
+   const palette=palettes[btn.dataset.palette]; if(!palette)return;
+   $('editColor').value=palette.color;
+   $('editTextColor').value=palette.textColor;
+   $('editHeadingColor').value=palette.headingColor;
+   $('editMutedColor').value=palette.mutedColor;
+   $('editBgColor').value=palette.bgColor;
+   $('editHeroBg').value=palette.heroBg;
+   $('editSectionBg').value=palette.sectionBg;
+   $('editNavy').value=palette.navy;
+   $('editGold').value=palette.gold;
+   $('editLine').value=palette.line;
+   apply({...state,color:palette.color,settings:{...state.settings,...palette}});
+ }));
+ supabaseClient.auth.onAuthStateChange(async(event,session)=>{
+   if(session && session.user.email.toLowerCase()===ADMIN_EMAIL){
+     $('loginView').hidden=true;$('adminView').hidden=false;await loadRemote();
+   }
+ });
+ loadRemote();
+})();
+</script>
+</body>
+</html>
